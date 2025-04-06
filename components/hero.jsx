@@ -1,8 +1,8 @@
 "use client";
-import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
   const imageRef = useRef(null);
@@ -10,7 +10,6 @@ const HeroSection = () => {
 
   useEffect(() => {
     const imageElement = imageRef.current;
-    console.log('Image ref:', imageRef.current);
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const scrollThreshold = 100;
@@ -47,7 +46,7 @@ const HeroSection = () => {
               Get Started
             </Button>
           </Link>
-          <Link href="https://www.youtube.com/roadsidecoder">
+          <Link href="">
             <Button size="lg" variant="outline" className="px-8 cursor-pointer">
               Watch Demo
             </Button>
@@ -56,7 +55,7 @@ const HeroSection = () => {
         <div className="hero-image-wrapper mt-5 md:mt-0">
           <div ref={imageRef} className="hero-image">
             <Image
-              src="/banner2.jpeg"
+              src="/banner3.jpeg"
               width={1280}
               height={720}
               alt="Dashboard Preview"
